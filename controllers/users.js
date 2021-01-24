@@ -20,7 +20,7 @@ async function signup(req, res) {
 };
 
 function createJWT(user) {
-    return jwt.sign({ user }, SECRET, {expiresIn: '15m'});
+    return jwt.sign({ user }, SECRET, {expiresIn: '60m'});
 };
 
 async function login(req, res) {
