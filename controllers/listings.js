@@ -22,9 +22,7 @@ async function getListings(req, res) {
 
 async function show(req, res) {
     try {
-        // const id = req.params.id;
         const data = await Listing.findById(req.params.id)
-        console.log('data: ', data);
         res.json(data);
     } catch (error) {
         console.log(error);
